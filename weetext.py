@@ -18,8 +18,8 @@
 # Development repository at: https://github.com/rxcomm/weeText/
 
 SCRIPT_NAME    = "weetext"
-SCRIPT_AUTHOR  = "David R. Andersen <k0rx@RXcomm.net>, Tycho Andersen <tycho@tycho.ws>"
-SCRIPT_VERSION = "0.1.2"
+SCRIPT_AUTHOR  = "David R. Andersen <k0rx@RXcomm.net>, Tycho Andersen <tycho@tycho.ws>, Blake Bartenbach <blake@proxa.co>"
+SCRIPT_VERSION = "0.1.3"
 SCRIPT_LICENSE = "GPL3"
 SCRIPT_DESC    = "SMS Text Messaging script for Weechat using Google Voice"
 
@@ -406,9 +406,9 @@ try:
     voice = Voice()
     voice.login(email, passwd)
     voice.send_sms(number, payload)
-    print '<message sent>'
 except:
     print '<message NOT sent!>'
+#TODO retry
 
 os.remove(user_path + '/.weechat/.gvlock.' + msg_id)
 """)

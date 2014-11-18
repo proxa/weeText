@@ -3,6 +3,11 @@ weeText
 
 Text messaging script for Weechat using Google Voice
 
+### Dependencies:
+
+* python2-pygooglevoice
+* python2-beautifulsoup3
+
 ### Usage:
 
 1) Edit the script or ```~/.weechat/plugins.conf``` and input
@@ -49,3 +54,10 @@ the case for the crypt.py script
 1. right now there aren't really any... ```;-)```
 
 Enjoy!
+
+### Troubleshooting:
+
+If you run into an issue with pygooglevoice failing to login, you might need
+this patch: https://gist.github.com/proxa/989b7803e228a754447d
+
+Fixes a regex issue rendering you unable to login with pygooglevoice.
